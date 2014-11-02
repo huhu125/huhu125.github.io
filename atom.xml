@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[huhu's blog]]></title>
+  <subtitle><![CDATA[everyone have a]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2014-11-02T14:36:36.857Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[huhu]]></name>
+    <email><![CDATA[995645519@qq.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[]]></title>
+    <link href="http://yoursite.com/2014/09/26/hexo%E5%8A%A0%E8%BD%BD%E6%85%A2%E8%A7%A3%E5%86%B3/"/>
+    <id>http://yoursite.com/2014/09/26/hexo加载慢解决/</id>
+    <published>2014-09-25T17:03:03.000Z</published>
+    <updated>2014-09-25T16:55:31.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="hexo博客加载太慢解决"><strong>hexo博客加载太慢解决</strong></h1>
+<p>每次打开自己博客首页都得加载半天，主要是因为最近在<code>block Google</code>，而hexo中引用了<code>googleapis</code>，说白了就是通过Google加载，所以导致加载变慢，我们需要做的就是把<code>googleapis</code>换掉成<code>百度</code>的。</p>
+<p>我这里说的是<code>light主题</code>的改法，找到<code>/light/source/css/_base/variable.styl</code>，将<code>fonts.googleapis.com/</code>换成<code>libs.baidu.com/fontawesome/4.0.3/css/font-awesome.</code></p>
+<p>完成后，再<code>hexo g</code> ; <code>hexo d</code> 速度应该跟以前一样快了。如果还没变快，可以试试查看<code>/hexo/public/css/style.css</code>中的<code>googleapis</code>地址是否被改为了<code>baidu</code>的地址，如果依然为googleapis的地址的话就删掉<code>style.css</code>重新<code>hexo g</code>一次。</p>
+<h3 id="怎么查看还有没有地方引用Google的东西"><strong>怎么查看还有没有地方引用Google的东西</strong></h3>
+<p>命令行运行：</p>
+<pre><code>sudo <span class="keyword">find</span> ~/(博客主文件夹地址) -<span class="built_in">type</span> <span class="keyword">f</span> -name “*styl” | xargs <span class="keyword">grep</span> “google”
+</code></pre><p>看看有没有其他地方还引用了google上的东西。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="hexo博客加载太慢解决"><strong>hexo博客加载太慢解决</strong></h1>
+<p>每次打开自己博客首页都得加载半天，主要是因为最近在<code>block Google</code>，而hexo中引用了<code>googleapis</co]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2014/09/26/hello-world/"/>
+    <id>http://yoursite.com/2014/09/26/hello-world/</id>
+    <published>2014-09-25T17:03:03.000Z</published>
+    <updated>2014-09-25T16:55:30.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[]]></title>
+    <link href="http://yoursite.com/2014/09/26/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2014/09/26/关于hexo博客的学习/</id>
+    <published>2014-09-25T17:03:03.000Z</published>
+    <updated>2014-09-25T16:55:32.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="关于hexo博客的学习"><strong>关于hexo博客的学习</strong></h1>
+<p>在<code>Windows</code>系统上搭建hexo博客</p>
+<h2 id="安装Git"><strong>安装Git</strong></h2>
+<p>最近好像Google上搜索不了，我这给你个下载地址吧<a href="http://git-scm.com/download/" target="_blank" rel="external">git的下载</a>这里是Windows系统的，所以点击<code>Windows</code>,下载完直接运行git即完成安装。</p>
+<h2 id="安装Node-js"><strong>安装Node.js</strong></h2>
+<p>node.js的安装也很简单，下载完并运行即完成安装。<a href="http://nodejs.org/" target="_blank" rel="external">node.js的下载</a><a id="more"></a></p>
+<h2 id="安装hexo"><strong>安装hexo</strong></h2>
+<p>利用<code>npm</code>命令即可安装。在任意界面右击鼠标，选择<code>Git Bash Here</code>输入： </p>
+<pre><code>npm <span class="operator"><span class="keyword">install</span> -g hexo</span>
+</code></pre><h2 id="创建hexo文件夹"><strong>创建hexo文件夹</strong></h2>
+<p>上一步完成后，在你想要安装的盘里新建一个文件夹，如：<code>（E:\hexo）</code>，在hexo文件夹下点击鼠标右键，选择<code>Git Bash Here</code>输入：</p>
+<pre><code>hexo <span class="keyword">init</span>
+</code></pre><p>Hexo 即会自动在目标文件夹建立网站所需要的所有文件。</p>
+<h2 id="安装依赖包"><strong>安装依赖包</strong></h2>
+<p>右击选择<code>Git Bash Here</code> 输入：</p>
+<pre><code>npm <span class="operator"><span class="keyword">install</span> </span>
+</code></pre><h2 id="查看本地博客"><strong>查看本地博客</strong></h2>
+<p>重新打开<code>Git Bash Here</code>输入：</p>
+<pre><code>hexo generate (这里可以输入简写：hexo g 是一样的效果)
+
+hexo <span class="keyword">server</span> (这里可以输入简写：hexo s 是一样的效果)
+</code></pre><p>到这里我们的本地hexo博客已经建立完成了，现在可以打开浏览器输入：<code>localhost:4000</code> 查看自己的博客了，这只是本地博客，只能自己看到，别人看不到的哦亲。<br>接下来我们把<code>hexo博客</code>部署到<code>github</code>上，也就是放到网上，这样大家就都可以看到你的博客了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="关于hexo博客的学习"><strong>关于hexo博客的学习</strong></h1>
+<p>在<code>Windows</code>系统上搭建hexo博客</p>
+<h2 id="安装Git"><strong>安装Git</strong></h2>
+<p>最近好像Google上搜索不了，我这给你个下载地址吧<a href="http://git-scm.com/download/" target="_blank" rel="external">git的下载</a>这里是Windows系统的，所以点击<code>Windows</code>,下载完直接运行git即完成安装。</p>
+<h2 id="安装Node-js"><strong>安装Node.js</strong></h2>
+<p>node.js的安装也很简单，下载完并运行即完成安装。<a href="http://nodejs.org/" target="_blank" rel="external">node.js的下载</a>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[记忆的一部分]]></title>
+    <link href="http://yoursite.com/2014/09/13/ji-yi-de-yi-bu-fen/"/>
+    <id>http://yoursite.com/2014/09/13/ji-yi-de-yi-bu-fen/</id>
+    <published>2014-09-12T17:59:03.000Z</published>
+    <updated>2014-09-25T16:55:31.000Z</updated>
+    <content type="html"><![CDATA[<p>附带帅锅图一张<br><img src="http://huhu124.qiniudn.com/12.jpg?download&amp;e=1410790645&amp;token=Um1PeCrzx3rENV4VfFXCioo9BzO-CWOT49dVMUrT:3tnomst9NK8IIOW13Oj7du045v0" alt="两个帅锅"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>附带帅锅图一张<br><img src="http://huhu124.qiniudn.com/12.jpg?download&amp;e=1410790645&amp;token=Um1PeCrzx3rENV4VfFXCioo9BzO-CWOT49dVMUrT:3tnom]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[my first blog]]></title>
+    <link href="http://yoursite.com/2014/09/11/my-first-blog-1/"/>
+    <id>http://yoursite.com/2014/09/11/my-first-blog-1/</id>
+    <published>2014-09-11T09:33:45.000Z</published>
+    <updated>2014-11-02T11:32:47.000Z</updated>
+    <content type="html"><![CDATA[<p>前段时间搭建的博客删了，这是近两天重新搭建的，第一篇博客，先来最近喜欢上的一首歌的歌词吧：<br>【记得我爱你—李易峰】<br>留不下来的叫残念<br>我用一段旅程来逆向思考我的伤悲<br>末班车要开往终点<br>想说的话太多却只能说再见<br>流不回去的是眼泪<br>可惜了这个让人触景伤情幽静的美<a id="more"></a><br>爱没有所谓的抱歉<br>所有幸福的可能我都想成全<br>记忆的窗景时间停在哪里<br>忘了那些憧憬记得我爱你<br>遥远的回忆那么近<br>争吵的情绪太安静<br>你还是我最舍不得的曾经 </p>
+<p>流不回去的是眼泪<br>可惜了这个让人触景伤情幽静的美<br>爱没有所谓的抱歉<br>所有幸福的可能我都想成全<br>记忆的窗景时间停在哪里<br>忘了那些憧憬记得我爱你<br>遥远的回忆那么近<br>争吵的情绪太安静<br>你还是我最舍不得的曾经<br>记忆的窗景时间停在哪里<br>忘了那些憧憬记得我爱你<br>遥远的回忆那么近<br>争吵的情绪太安静<br>你还是我最舍不得的曾经<br>伤心是一封寄给青春的信</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前段时间搭建的博客删了，这是近两天重新搭建的，第一篇博客，先来最近喜欢上的一首歌的歌词吧：<br>【记得我爱你—李易峰】<br>留不下来的叫残念<br>我用一段旅程来逆向思考我的伤悲<br>末班车要开往终点<br>想说的话太多却只能说再见<br>流不回去的是眼泪<br>可惜了这个让人触景伤情幽静的美]]>
+    
+    </summary>
+    
+  </entry>
+  
+</feed>
