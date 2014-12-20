@@ -4,7 +4,7 @@
   <subtitle><![CDATA[everyone have a]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2014-11-02T14:48:14.716Z</updated>
+  <updated>2014-12-20T13:26:01.149Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -55,9 +55,8 @@
     <link href="http://yoursite.com/2014/09/26/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2014/09/26/关于hexo博客的学习/</id>
     <published>2014-09-25T17:03:03.000Z</published>
-    <updated>2014-09-25T16:55:32.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="关于hexo博客的学习"><strong>关于hexo博客的学习</strong></h1>
-<p>在<code>Windows</code>系统上搭建hexo博客</p>
+    <updated>2014-12-20T13:25:14.000Z</updated>
+    <content type="html"><![CDATA[<p>title: 关于hexo博客的学习<br>在<code>Windows</code>系统上搭建hexo博客</p>
 <h2 id="安装Git"><strong>安装Git</strong></h2>
 <p>最近好像Google上搜索不了，我这给你个下载地址吧<a href="http://git-scm.com/download/" target="_blank" rel="external">git的下载</a>这里是Windows系统的，所以点击<code>Windows</code>,下载完直接运行git即完成安装。</p>
 <h2 id="安装Node-js"><strong>安装Node.js</strong></h2>
@@ -80,8 +79,7 @@ hexo <span class="keyword">server</span> (这里可以输入简写：hexo s 是�
 </code></pre><p>到这里我们的本地hexo博客已经建立完成了，现在可以打开浏览器输入：<code>localhost:4000</code> 查看自己的博客了，这只是本地博客，只能自己看到，别人看不到的哦亲。<br>接下来我们把<code>hexo博客</code>部署到<code>github</code>上，也就是放到网上，这样大家就都可以看到你的博客了。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="关于hexo博客的学习"><strong>关于hexo博客的学习</strong></h1>
-<p>在<code>Windows</code>系统上搭建hexo博客</p>
+    <![CDATA[<p>title: 关于hexo博客的学习<br>在<code>Windows</code>系统上搭建hexo博客</p>
 <h2 id="安装Git"><strong>安装Git</strong></h2>
 <p>最近好像Google上搜索不了，我这给你个下载地址吧<a href="http://git-scm.com/download/" target="_blank" rel="external">git的下载</a>这里是Windows系统的，所以点击<code>Windows</code>,下载完直接运行git即完成安装。</p>
 <h2 id="安装Node-js"><strong>安装Node.js</strong></h2>
